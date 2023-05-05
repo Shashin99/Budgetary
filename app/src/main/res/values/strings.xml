@@ -1,3 +1,79 @@
 <resources>
     <string name="app_name">BudgetApp</string>
+
+    <string name="BHead"> My Bills </string>
+    <string name="tvIncome"> Income </string>
+    <string name="tvAmount"> Rs.50000 </string>
+    <string name="btnViewBill"> View All Bills </string>
+    <string name="btnAddBill"> Add Your Bills </string>
+    <string name="tvDip"> Manage Your Bills and Save Your Money </string>
+
+    <string name="AddTitle"> Register </string>
+    <string name="tvBillId"> Bill Id </string>
+    <string name="etBillId">  </string>
+    <!--    <string name="tvSType"> Service Name </string>-->
+    <string name="tvBillName"> Bill Name </string>
+    <string name="etBillName"> Service </string>
+    <string name="tvAccName"> Account Name </string>
+    <string name="etAccName"> Name </string>
+    <string name="tvAccNum"> Account Number </string>
+    <string name="etAccNum"> Number </string>
+    <string name="tvPayAmount"> Amount To Be Pay </string>
+    <string name="etPayAmount"> Pay Amount </string>
+    <string name="tvDis"> Description </string>
+    <string name="etDis"> Type Here </string>
+    <string name="btnSave"> Save Data </string>
+    <string name="btnClear"> Clear Data </string>
+
+    <string name="DetailTitle"> Bill Details </string>
+    <string name="btnUpdate"> Update </string>
+    <string name="btnProceed"> Proceed </string>
+    <string name="btnDelete"> Delete Data </string>
+
+    <string name="PHead"> Make Payment </string>
+    <string name="etHolderName"> Enter CardHolder Name </string>
+    <string name="etCardNumber"> Enter Card Number </string>
+    <string name="etYear"> Expired Year </string>
+    <string name="etMonth"> Expired Month </string>
+    <string name="etCvc"> CVC </string>
+    <string name="cbAgreement">I agree to terms and conditions</string>
+    <string name="btnPay"> pay </string>
+    <string name="btnCancel"> cancel </string>
+
+    <string-array name="Choose_Service">
+        <item> Choose Service</item>
+        <item> Electricity</item>
+        <item> Water </item>
+        <item> Insurance </item>
+        <item> Utilities </item>
+        <item> Others </item>
+    </string-array>
+
+    <string-array name="Years">
+        <item> </item>
+        <item> 2023 </item>
+        <item> 2024 </item>
+        <item> 2025 </item>
+        <item> 2026 </item>
+        <item> 2027 </item>
+        <item> 2028 </item>
+    </string-array>
+
+    <string-array name="Month">
+        <item> </item>
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+        <item> 9 </item>
+        <item> 10 </item>
+        <item> 11 </item>
+        <item> 12 </item>
+
+    </string-array>
+
 </resources>
