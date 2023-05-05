@@ -2,7 +2,7 @@
     <string name="app_name">BudgetApp</string>
 
     <string name="BHead"> My Bills </string>
-    <string name="tvIncome"> Income </string>
+    <string name="tvIncome"> Available </string>
     <string name="tvAmount"> Rs.50000 </string>
     <string name="btnViewBill"> View All Bills </string>
     <string name="btnAddBill"> Add Your Bills </string>
@@ -15,13 +15,13 @@
     <string name="tvBillName"> Bill Name </string>
     <string name="etBillName"> Service </string>
     <string name="tvAccName"> Account Name </string>
-    <string name="etAccName"> Name </string>
+    <string name="etAccName"> Account Name </string>
     <string name="tvAccNum"> Account Number </string>
-    <string name="etAccNum"> Number </string>
+    <string name="etAccNum"> Account Number </string>
     <string name="tvPayAmount"> Amount To Be Pay </string>
     <string name="etPayAmount"> Pay Amount </string>
     <string name="tvDis"> Description </string>
-    <string name="etDis"> Type Here </string>
+    <string name="etDis"> Description </string>
     <string name="btnSave"> Save Data </string>
     <string name="btnClear"> Clear Data </string>
 

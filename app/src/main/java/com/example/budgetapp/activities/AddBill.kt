@@ -1,5 +1,6 @@
 package com.example.budgetapp.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,6 +20,7 @@ class AddBill : AppCompatActivity() {
     private lateinit var etPayAmount: EditText
     private lateinit var etDescription: EditText
     private lateinit var btnSaveData: Button
+    private lateinit var btnClearData: Button
 
     private lateinit var dbRef: DatabaseReference
 
@@ -33,11 +35,18 @@ class AddBill : AppCompatActivity() {
         etDescription = findViewById(R.id.etDis)
 
         btnSaveData = findViewById(R.id.btnNewUpdate)
+        btnClearData = findViewById(R.id.btnClear)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Bills")
 
         btnSaveData.setOnClickListener {
             saveBillData()
+            val intent = Intent(this, FetchingBill::class.java)
+            startActivity(intent)
+        }
+
+        btnClearData.setOnClickListener {
+            clearBillData()
         }
 
     }
@@ -79,16 +88,24 @@ class AddBill : AppCompatActivity() {
             .addOnCompleteListener {
                 Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_LONG).show()
 
-                etBillName.setSelection(0)
-                etAccName.text.clear()
-                etAccNum.text.clear()
-                etPayAmount.text.clear()
-                etDescription.text.clear()
+//                etBillName.setSelection(0)
+//                etAccName.text.clear()
+//                etAccNum.text.clear()
+//                etPayAmount.text.clear()
+//                etDescription.text.clear()
 
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
 
+    }
+
+    private fun clearBillData() {
+        etBillName.setSelection(0)
+        etAccName.text.clear()
+        etAccNum.text.clear()
+        etPayAmount.text.clear()
+        etDescription.text.clear()
     }
 
 }
