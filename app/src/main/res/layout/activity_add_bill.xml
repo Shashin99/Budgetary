@@ -96,8 +96,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/etAccName" />
+                android:hint="@string/etAccName"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/tvAccNum"
@@ -119,8 +119,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="@string/etAccNum" />
+                android:hint="@string/etAccNum"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/tvPayAmount"
@@ -142,8 +142,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="@string/etPayAmount" />
+                android:hint="@string/etPayAmount"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/tvDis"
@@ -165,8 +165,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/etDis" />
+                android:hint="@string/etDis"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/btnNewUpdate"
