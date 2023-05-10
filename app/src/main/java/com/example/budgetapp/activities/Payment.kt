@@ -14,6 +14,8 @@ import com.example.budgetapp.models.validations.ValidationResult
 
 class Payment : AppCompatActivity() {
 
+    private lateinit var notificationHelper: NotificationHelper
+
     lateinit var etHolderName: EditText
     lateinit var etCardNumber: EditText
     lateinit var tvYear: TextView
@@ -22,7 +24,7 @@ class Payment : AppCompatActivity() {
     lateinit var spnMonth: Spinner
     lateinit var etCvc: EditText
     lateinit var cbAgree: CheckBox
-    var count = 0;
+    var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,8 @@ class Payment : AppCompatActivity() {
         spnMonth = findViewById(R.id.spnMonth)
         etCvc = findViewById(R.id.etCvc)
         cbAgree = findViewById(R.id.cbAgreement)
+
+        notificationHelper = NotificationHelper(this)
     }
 
     private fun displayAlert(title:String, message:String){
@@ -49,6 +53,7 @@ class Payment : AppCompatActivity() {
         dialog.show()
     }
 
+    //pay function (validation)
     fun pay(v: View){
         val myForm = FormData(
             etHolderName.text.toString(),
@@ -147,9 +152,11 @@ class Payment : AppCompatActivity() {
         if(count==6){
             displayAlert("Success","Payment Done Successfully")
         }
+
+        notificationHelper.pay()
     }
 
-    //CANCEL FUNCTION
+    //cancel function
     fun cancel(v: View){
         etHolderName.setText("")
         etCardNumber.setText("")
