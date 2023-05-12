@@ -48,6 +48,7 @@ class Payment : AppCompatActivity() {
         builder.setMessage(message)
         builder.setPositiveButton("OK") { dialog, which ->
             // Do something when the "OK" button is clicked
+            notificationHelper.pay()
         }
         val dialog = builder.create()
         dialog.show()
@@ -67,7 +68,7 @@ class Payment : AppCompatActivity() {
         val holderNameValidation = myForm.validateHolderName()
         val cardNumberValidation = myForm.validateCardNumber()
         val spnYearValidation = myForm.validateYear()
-        val spnDateValidation = myForm.validateDate()
+        val spnMonthValidation = myForm.validateMonth()
         val cvcValidation = myForm.validateCvc()
         val cbAgreeValidation = myForm.validateAgreement()
 
@@ -111,19 +112,19 @@ class Payment : AppCompatActivity() {
             }
         }
 
-        when(spnDateValidation){
+        when(spnMonthValidation){
             is ValidationResult.Valid ->{
                 count ++
             }
             is ValidationResult.Invalid ->{
                 val tv:TextView = spnMonth.selectedView as TextView
                 tv.error =""
-                tv.text = spnDateValidation.errorMessage
+                tv.text = spnMonthValidation.errorMessage
             }
             is ValidationResult.Empty ->{
                 val tv:TextView = spnMonth.selectedView as TextView
                 tv.error =""
-                tv.text = spnDateValidation.errorMessage
+                tv.text = spnMonthValidation.errorMessage
             }
         }
 
@@ -153,7 +154,7 @@ class Payment : AppCompatActivity() {
             displayAlert("Success","Payment Done Successfully")
         }
 
-        notificationHelper.pay()
+
     }
 
     //cancel function

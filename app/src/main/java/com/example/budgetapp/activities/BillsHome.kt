@@ -8,7 +8,7 @@ import com.example.budgetapp.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity : AppCompatActivity() {
+class BillsHome : AppCompatActivity() {
 
     private lateinit var btnViewBill: Button
     private lateinit var btnAddBill: Button
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_bills_home)
 
         btnViewBill = findViewById(R.id.btnViewBill)
         btnAddBill = findViewById(R.id.btnAddBill)

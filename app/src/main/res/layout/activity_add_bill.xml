@@ -32,6 +32,7 @@
             android:layout_marginEnd="117dp"
             android:layout_marginBottom="16dp"
             android:text="@string/AddTitle"
+            android:textColor="@color/black"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"

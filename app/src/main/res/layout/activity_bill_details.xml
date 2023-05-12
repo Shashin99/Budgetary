@@ -31,6 +31,7 @@
             android:layout_marginEnd="117dp"
             android:layout_marginBottom="16dp"
             android:text="@string/DetailTitle"
+            android:textColor="@color/black"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -194,7 +195,8 @@
                     android:text="@string/btnUpdate"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp" />
 
                 <Button
                     android:id="@+id/btnProceed"
@@ -207,7 +209,8 @@
                     android:text="@string/btnProceed"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp" />
 
             </LinearLayout>
 
@@ -226,7 +229,8 @@
                     android:text="@string/btnDelete"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp" />
             </LinearLayout>
 
         </LinearLayout>
