@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:text="Welcome !"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:background="@drawable/add_income"
+            android:hint="Email Address" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/add_income"
+            android:textAlignment="center"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/round_button_shape"
+            android:text="Login"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/LoginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:text="Create an Account"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="30dp"
+            android:text="Create Account "
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_income"
+            android:hint="Enter User Name"
+            android:textAlignment="center" />
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_income"
+            android:hint="Enter your Email"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_income"
+            android:hint="Enter your Password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_income"
+            android:hint="Re-Enter the password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/signBtn"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_button_shape"
+            android:text="Sign Up"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

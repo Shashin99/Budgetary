@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserProfile">
+
+    <TextView
+        android:id="@+id/udtextView6"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:text="USER PROFILE"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="476dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/udimageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/baseline_people_24" />
+
+
+            <EditText
+                android:id="@+id/udtextView2"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="20dp"
+                android:text="Shashini"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/udimageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/displaydetails" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/udimageEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/email" />
+
+            <TextView
+
+                android:id="@+id/udtextEmail"
+                android:layout_width="284dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="shshani0002@gmail.com"
+                android:layout_marginBottom="20dp"
+
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/udimageTel"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/telno" />
+
+            <TextView
+                android:id="@+id/udtextTel"
+                android:layout_width="284dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="0701234567"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/udtextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Goal"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/udtextView3"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_margin="20dp"
+                android:paddingLeft="25dp"
+                android:text="To save Rs. 25,000 by the end of August"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="155dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/udimageView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/profilebg" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="732dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/background"
+    tools:context=".activities.IncomeMain">
+
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="730dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="232dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="405dp"
+                android:layout_height="233dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/main_image" />
+
+            <LinearLayout
+                android:layout_width="409dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="263dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Footer-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="419dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/square"
+                    android:backgroundTint="#D0F0C0">
+
+                    <LinearLayout
+                        android:layout_width="404dp"
+                        android:layout_height="354dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <Button
+                            android:id="@+id/homeIncome"
+                            android:layout_width="250dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/income_middle"
+                            android:text="INCOME"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/text1"
+                            android:layout_width="250dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/income_middle"
+                            android:text="BUDGETING"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/text2"
+                            android:layout_width="250dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/income_middle"
+                            android:text="BILLS"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/text3"
+                            android:layout_width="250dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/income_middle"
+                            android:text="EXPENSES"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="410dp"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Here's, Start your Plan"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/background"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp">
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="409dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="580dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="53dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp"
+                        android:scrollbarSize="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:srcCompat="@drawable/home_home" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="53dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp"
+                        android:scrollbarSize="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/divider"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/unselected_user" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
