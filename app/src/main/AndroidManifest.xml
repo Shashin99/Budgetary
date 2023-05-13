@@ -38,7 +38,7 @@
             android:name=".IncomeHome"
             android:exported="false" />
         <activity
-            android:name=".ExpensesHome"
+            android:name=".activities.ExpensesHome"
             android:exported="false" />
         <activity
             android:name=".activities.AddBill"
