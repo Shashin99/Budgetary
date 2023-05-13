@@ -48,7 +48,6 @@ class AddBill : AppCompatActivity() {
         btnClearData.setOnClickListener {
             clearBillData()
         }
-
     }
 
     private fun saveBillData() {
@@ -60,33 +59,43 @@ class AddBill : AppCompatActivity() {
         val billPayAmount = etPayAmount.text.toString()
         val billDis = etDescription.text.toString()
 
-        /*if(billName == etBillName.setSelection(0)){
-             etBillName.error = "Please Fill this"
-         }*/
+//        if(billName == etBillName.setSelection(0)){
+//             etBillName.error = "Please Fill this"
+//         }
 
         if(billAccName.isEmpty()){
             etAccName.error = "Please Fill this"
+            return
         }
 
         if(billAccNum.isEmpty()){
             etAccNum.error = "Please Fill this"
+            return
         }
 
         if(billPayAmount.isEmpty()){
             etPayAmount.error = "Please Fill this"
+            return
         }
 
         if(billDis.isEmpty()){
             etDescription.error = "Please Fill this"
+            return
         }
 
-        val billId = dbRef.push().key!!
+        if (billAccName.isEmpty() || billAccNum.isEmpty() || billPayAmount.isEmpty() || billDis.isEmpty()) {
+            // Display an error message to the user and prevent data submission
+            Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show()
+            return
+        } else {
+            // Submit the data to Firebase
+            val billId = dbRef.push().key!!
 
-        val bill = BillModel(billId, billName.selectedItem.toString(), billAccName, billAccNum, billPayAmount,  billDis)
+            val bill = BillModel(billId, billName.selectedItem.toString(), billAccName, billAccNum, billPayAmount,  billDis)
 
-        dbRef.child(billId).setValue(bill)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_LONG).show()
+            dbRef.child(billId).setValue(bill)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_LONG).show()
 
 //                etBillName.setSelection(0)
 //                etAccName.text.clear()
@@ -94,10 +103,11 @@ class AddBill : AppCompatActivity() {
 //                etPayAmount.text.clear()
 //                etDescription.text.clear()
 
-            }.addOnFailureListener { err ->
-                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
 
+        }
     }
 
     private fun clearBillData() {

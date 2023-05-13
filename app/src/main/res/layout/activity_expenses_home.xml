@@ -4,6 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExpensesHome">
+    android:background="@drawable/profile_bg"
+    tools:context=".activities.MainActivity">
+
+    <Button
+        android:id="@+id/Add_expense_page_button"
+        android:layout_width="331dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Add expense"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/View_expense_page_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/View_expense_page_button"
+        android:layout_width="332dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="23dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="View expenses"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Add_expense_page_button" />
+
+    <TextView
+        android:id="@+id/exp_balance_b"
+        android:layout_width="239dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/lightrectangle1"
+        android:gravity="center"
+        android:text="Balance : 15000"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

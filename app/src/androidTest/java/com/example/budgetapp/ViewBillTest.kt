@@ -11,7 +11,7 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.budgetapp.activities.FetchingBill
-import com.example.budgetapp.activities.MainActivity
+import com.example.budgetapp.activities.BillsHome
 import org.junit.*
 import org.junit.runner.RunWith
 
@@ -25,8 +25,8 @@ class ViewBillTest {
     }
 
     @get:Rule
-    val activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
-    private lateinit var activityScenario: ActivityScenario<MainActivity>
+    val activityScenarioRule = ActivityScenarioRule(BillsHome::class.java)
+    private lateinit var activityScenario: ActivityScenario<BillsHome>
     @Before
     fun setUp() {
         activityScenario = activityScenarioRule.scenario

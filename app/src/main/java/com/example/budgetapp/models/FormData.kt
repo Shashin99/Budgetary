@@ -4,10 +4,11 @@ import com.example.budgetapp.models.validations.ValidationResult
 
 class FormData (
 
+    // payment form
     private var holderName:String,
     private var cardNumber:String,
     private var year:String,
-    private var date:String,
+    private var month:String,
     private var cvc:String,
     private var agree:Boolean
 
@@ -42,9 +43,9 @@ class FormData (
 
     }
 
-    fun validateDate(): ValidationResult {
-        return if (date.isEmpty()) {
-            ValidationResult.Empty("Data is empty")
+    fun validateMonth(): ValidationResult {
+        return if (month.isEmpty()) {
+            ValidationResult.Empty("Month is empty")
         } else {
             ValidationResult.Valid
         }
@@ -69,7 +70,5 @@ class FormData (
             ValidationResult.Valid
         }
     }
-
-
 
 }
