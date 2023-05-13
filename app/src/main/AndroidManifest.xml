@@ -20,22 +20,16 @@
             android:name=".activities.UserProfile"
             android:exported="false" />
         <activity
-            android:name=".IncomeAdapter"
+            android:name=".activities.IncomeMain"
             android:exported="false" />
         <activity
-            android:name=".IncomeMain"
+            android:name=".activities.HomePage"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".activities.EditIncome"
             android:exported="false" />
         <activity
-            android:name=".EditIncome"
-            android:exported="false" />
-        <activity
-            android:name=".AddIncome"
-            android:exported="false" />
-        <activity
-            android:name=".IncomeHome"
+            android:name=".activities.AddIncome"
             android:exported="false" />
         <activity
             android:name=".activities.ExpensesHome"
