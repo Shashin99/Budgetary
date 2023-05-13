@@ -71,7 +71,7 @@ class EditIncome : AppCompatActivity() {
 
         mTask.addOnSuccessListener {
             Toast.makeText(this,"Income Record deleted" , Toast.LENGTH_SHORT).show()
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this , IncomeMain::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{

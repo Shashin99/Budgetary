@@ -29,7 +29,8 @@ class IncomeMain : AppCompatActivity() {
         setContentView(binding.root)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Adding Income")
-        recyclerView = findViewById(R.id.IncomeRecycler)
+
+//        recyclerView = findViewById(R.id.IncomeRecycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
