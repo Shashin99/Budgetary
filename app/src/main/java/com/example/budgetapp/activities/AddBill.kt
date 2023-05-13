@@ -40,9 +40,20 @@ class AddBill : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Bills")
 
         btnSaveData.setOnClickListener {
-            saveBillData()
-            val intent = Intent(this, FetchingBill::class.java)
-            startActivity(intent)
+            if(etAccName.text.isNullOrEmpty()){
+                etAccName.error = "Please Fill this"
+            }else if(etAccNum.text.isNullOrEmpty()){
+                etAccNum.error = "Please Fill this"
+            }else if(etPayAmount.text.isNullOrEmpty()){
+                etPayAmount.error = "Please Fill this"
+            }else if(etDescription.text.isNullOrEmpty()){
+                etDescription.error = "Please Fill this"
+            }
+            else {
+                saveBillData()
+                val intent = Intent(this, FetchingBill::class.java)
+                startActivity(intent)
+            }
         }
 
         btnClearData.setOnClickListener {
