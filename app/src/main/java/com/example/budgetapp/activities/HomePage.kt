@@ -20,6 +20,9 @@ class HomePage : AppCompatActivity() {
         setContentView(R.layout.main_home)
 
         homeIncome = findViewById(R.id.homeIncome)
+        homeBudget = findViewById(R.id.homeBudget)
+        homeBill = findViewById(R.id.homeBill)
+        homeExpense = findViewById(R.id.homeExpense)
         homeIcon = findViewById(R.id.imageView)
 
         homeIncome.setOnClickListener{
