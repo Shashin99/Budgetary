@@ -14,10 +14,22 @@
         android:theme="@style/Theme.BudgetApp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ExpUpdateDialog"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FetchingExpense"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ExpenseDetails"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddExpense"
+            android:exported="false" />
+        <activity
             android:name=".IncomeHome"
             android:exported="false" />
         <activity
-            android:name=".ExpensesHome"
+            android:name=".activities.ExpensesHome"
             android:exported="false" />
         <activity
             android:name=".activities.AddBill"

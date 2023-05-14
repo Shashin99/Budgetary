@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".activities.ExpenseDetails">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="615dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/HomeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeView" />
+
+    <ImageView
+        android:id="@+id/HomeView"
+        android:layout_width="63dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarSize="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/UserView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/unselected_home" />
+
+    <ImageView
+        android:id="@+id/UserView"
+        android:layout_width="63dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarSize="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/HomeView"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/unselected_user" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="409dp"
+        android:layout_height="639dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <Button
+            android:id="@+id/btn_Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="86dp"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="DELETE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_D_description" />
+
+        <TextView
+            android:id="@+id/exp_Category_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="228dp"
+            android:text="Category name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/exp_D_category"
+            android:layout_width="287dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="76dp"
+            android:background="@drawable/input_field_expense"
+            android:entries="@array/Choose_category"
+            android:hint="Expense amount"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_Category_name_label" />
+
+        <TextView
+            android:id="@+id/expenseamount_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="215dp"
+            android:text="Expense amount"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_D_category" />
+
+        <TextView
+            android:id="@+id/exp_D_expenseamount"
+            android:layout_width="292dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="72dp"
+            android:background="@drawable/input_field_expense"
+            android:ems="10"
+            android:hint="Expense amount"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expenseamount_name_label" />
+
+        <TextView
+            android:id="@+id/exp_Date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="320dp"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_D_expenseamount" />
+
+        <TextView
+            android:id="@+id/exp_D_date"
+            android:layout_width="292dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/input_field_expense"
+            android:ems="10"
+            android:hint="2001/08/31"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_Date_label" />
+
+        <TextView
+            android:id="@+id/exp_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="257dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_D_date" />
+
+        <TextView
+            android:id="@+id/exp_D_description"
+            android:layout_width="292dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="69dp"
+            android:background="@drawable/input_field_expense"
+            android:ems="10"
+            android:hint="Enter the reason"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_description_label" />
+
+        <Button
+            android:id="@+id/exp_btn_Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="73dp"
+            android:backgroundTint="#FCA510"
+            android:text="EDIT"
+            app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_D_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

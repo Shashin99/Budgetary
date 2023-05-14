@@ -76,4 +76,12 @@
 
     </string-array>
 
+    <string-array name="Choose_category">
+        <item></item>
+        <item>Food</item>
+        <item>Medicine</item>
+        <item>Education</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>
