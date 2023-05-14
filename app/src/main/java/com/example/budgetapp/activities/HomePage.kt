@@ -20,7 +20,7 @@ class HomePage : AppCompatActivity() {
         homeIcon = findViewById(R.id.imageView)
 
         homeIncome.setOnClickListener{
-            val intent = Intent(this,IncomeMain::class.java)
+            val intent = Intent(this, IncomeMain::class.java)
             startActivity(intent)
         }
 
