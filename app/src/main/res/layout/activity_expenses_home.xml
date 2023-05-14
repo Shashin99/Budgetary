@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/profile_bg"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.ExpensesHome">
 
     <Button
         android:id="@+id/Add_expense_page_button"
