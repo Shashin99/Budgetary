@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="#9FE2BF"
     tools:context=".activities.FetchingBill">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -23,11 +23,13 @@
 
     <TextView
         android:id="@+id/tvLoadingData"
-        android:layout_width="148dp"
-        android:layout_height="96dp"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:layout_width="288dp"
+        android:layout_height="87dp"
+        android:text="Waiting Bills"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

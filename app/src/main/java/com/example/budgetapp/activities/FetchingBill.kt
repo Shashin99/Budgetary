@@ -16,12 +16,15 @@ class FetchingBill : AppCompatActivity() {
 
     private lateinit var billRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
+
     private lateinit var billList: ArrayList<BillModel>
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetching_bill)
+
+        //fetching bill data in a recycler view
         billRecyclerView = findViewById(R.id.rvBill)
         billRecyclerView.layoutManager = LinearLayoutManager(this)
         billRecyclerView.setHasFixedSize(true)
