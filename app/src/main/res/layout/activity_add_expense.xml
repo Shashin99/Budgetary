@@ -163,7 +163,7 @@
         android:layout_marginEnd="61dp"
         android:background="@drawable/input_field_expense"
         android:ems="10"
-        android:hint="2023-05/15"
+        android:hint="2023-05-15"
         android:inputType="textPersonName"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
