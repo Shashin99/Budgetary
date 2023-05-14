@@ -30,7 +30,16 @@
                 android:gravity="center"
                 android:text="@string/tvBillName"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvDis"
+                android:textColor="@color/black"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
