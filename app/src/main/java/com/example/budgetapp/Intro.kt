@@ -10,7 +10,6 @@ import com.example.budgetapp.activities.Login
 class Intro : AppCompatActivity() {
 
     private lateinit var intro:ImageView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)

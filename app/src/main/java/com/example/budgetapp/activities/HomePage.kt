@@ -10,6 +10,9 @@ import com.example.budgetapp.R
 class HomePage : AppCompatActivity() {
 
     private lateinit var homeIncome : TextView
+    private lateinit var homeBudget : TextView
+    private lateinit var homeBill: TextView
+    private lateinit var homeExpense: TextView
     private lateinit var homeIcon : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
