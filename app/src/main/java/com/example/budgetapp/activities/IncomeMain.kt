@@ -6,11 +6,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.budgetapp.R
 import com.example.budgetapp.adapters.IncomeAdapter
 import com.example.budgetapp.databinding.ActivityIncomeMainBinding
 import com.example.budgetapp.models.IncomeModel
 import com.google.firebase.database.*
-
 
 class IncomeMain : AppCompatActivity() {
 
@@ -29,8 +29,7 @@ class IncomeMain : AppCompatActivity() {
         setContentView(binding.root)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Adding Income")
-
-//        recyclerView = findViewById(R.id.IncomeRecycler)
+        recyclerView = findViewById(R.id.IncomeRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
@@ -63,9 +62,9 @@ class IncomeMain : AppCompatActivity() {
 
                     }
 
-                    //display the total amount
+//display the total amount
                     binding.totalIncome.text = "$totalAmount"
-                    //add total amount to Firebase
+//add total amount to Firebase
                     val totalRef = FirebaseDatabase.getInstance().getReference("Total Income")
                     totalRef.setValue(totalAmount)
 
@@ -84,17 +83,14 @@ class IncomeMain : AppCompatActivity() {
         incomeAdapter.setOnItemClickListener(object : IncomeAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@IncomeMain, EditIncome::class.java)
-                //intent.putExtra("incomeID" , incomeList[position].incomeID)
+//intent.putExtra("incomeID", incomeList[position].incomeID)
                 intent.putExtra("incomeName", incomeList[position].incomeName)
                 intent.putExtra("incomeAmount", incomeList[position].incomeAmount)
                 intent.putExtra("incomeDate", incomeList[position].incomeDate)
                 intent.putExtra("incomeDesc", incomeList[position].incomeDesc)
                 startActivity(intent)
             }
-
-
         })
+
     }
 }
-
-
