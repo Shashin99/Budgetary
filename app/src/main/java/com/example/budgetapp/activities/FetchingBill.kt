@@ -16,7 +16,6 @@ class FetchingBill : AppCompatActivity() {
 
     private lateinit var billRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-
     private lateinit var billList: ArrayList<BillModel>
     private lateinit var dbRef: DatabaseReference
 
@@ -52,6 +51,7 @@ class FetchingBill : AppCompatActivity() {
                     val mAdapter = BillAdapter(billList)
                     billRecyclerView.adapter = mAdapter
 
+                    //click Listener
                     mAdapter.setOnItemClickListener(object:BillAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
