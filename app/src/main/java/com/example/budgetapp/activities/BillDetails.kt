@@ -121,7 +121,7 @@ class BillDetails : AppCompatActivity() {
         alertDialog.show()
 
         btnUpdateData.setOnClickListener {
-            updateEmpData(
+            updateBillData(
                 billId,
                 etBillName.selectedItem.toString(),
                 etAccName.text.toString(),
@@ -144,7 +144,7 @@ class BillDetails : AppCompatActivity() {
 
     }
 
-    private fun updateEmpData(
+    private fun updateBillData(
         id:String,
         name:String,
         accName:String,

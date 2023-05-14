@@ -144,7 +144,7 @@
                 android:layout_marginBottom="8dp"
                 android:ems="10"
                 android:hint="@string/etPayAmount"
-                android:inputType="number" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:id="@+id/tvDis"

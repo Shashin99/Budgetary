@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class AddBill : AppCompatActivity() {
 
+    //initialize variables
     private lateinit var etBillName: Spinner
     private lateinit var etAccName: EditText
     private lateinit var etAccNum: EditText
@@ -22,6 +23,7 @@ class AddBill : AppCompatActivity() {
     private lateinit var btnSaveData: Button
     private lateinit var btnClearData: Button
 
+    //database reference
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,9 +42,24 @@ class AddBill : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Bills")
 
         btnSaveData.setOnClickListener {
-            saveBillData()
-            val intent = Intent(this, FetchingBill::class.java)
-            startActivity(intent)
+            if (etAccName.text.isNullOrEmpty()){
+                etAccName.error = "Please Enter the Account Name"
+
+            }else if(etAccNum.text.isNullOrEmpty()){
+                etAccNum.error = "Please Enter the Account Number"
+
+            }else if(etPayAmount.text.isNullOrEmpty()){
+                etPayAmount.error = "Please Enter the Payment"
+
+            }else if(etDescription.text.isNullOrEmpty()){
+                etDescription.error = "Please Enter the Description"
+
+            }
+            else {
+                saveBillData()
+                val intent = Intent(this, FetchingBill::class.java)
+                startActivity(intent)
+            }
         }
 
         btnClearData.setOnClickListener {
@@ -63,34 +80,37 @@ class AddBill : AppCompatActivity() {
 //             etBillName.error = "Please Fill this"
 //         }
 
-        if(billAccName.isEmpty()){
-            etAccName.error = "Please Fill this"
-            return
-        }
-
-        if(billAccNum.isEmpty()){
-            etAccNum.error = "Please Fill this"
-            return
-        }
-
-        if(billPayAmount.isEmpty()){
-            etPayAmount.error = "Please Fill this"
-            return
-        }
-
-        if(billDis.isEmpty()){
-            etDescription.error = "Please Fill this"
-            return
-        }
+//        if(billAccName.isEmpty()){
+//            etAccName.error = "Please Fill this"
+//            return
+//        }
+//
+//        if(billAccNum.isEmpty()){
+//            etAccNum.error = "Please Fill this"
+//            return
+//        }
+//
+//        if(billPayAmount.isEmpty()){
+//            etPayAmount.error = "Please Fill this"
+//            return
+//        }
+//
+//        if(billDis.isEmpty()){
+//            etDescription.error = "Please Fill this"
+//            return
+//        }
 
         if (billAccName.isEmpty() || billAccNum.isEmpty() || billPayAmount.isEmpty() || billDis.isEmpty()) {
             // Display an error message to the user and prevent data submission
             Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show()
             return
+
         } else {
+
             // Submit the data to Firebase
             val billId = dbRef.push().key!!
 
+            //BillModel
             val bill = BillModel(billId, billName.selectedItem.toString(), billAccName, billAccNum, billPayAmount,  billDis)
 
             dbRef.child(billId).setValue(bill)
