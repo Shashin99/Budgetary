@@ -30,6 +30,20 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
+        homeBudget.setOnClickListener{
+
+        }
+
+        homeBill.setOnClickListener {
+            val intent = Intent(this, BillsHome::class.java)
+            startActivity(intent)
+        }
+
+        homeExpense.setOnClickListener {
+            val intent = Intent(this, ExpensesHome::class.java)
+            startActivity(intent)
+        }
+
         homeIcon.setOnClickListener{
             val intent = Intent(this,UserProfile::class.java)
             startActivity(intent)
