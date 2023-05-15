@@ -3,9 +3,15 @@ package com.example.budgetapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import com.example.budgetapp.R
+import com.example.budgetapp.models.ExpenseModel
 import com.google.firebase.FirebaseApp
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class ExpensesHome : AppCompatActivity() {
 
