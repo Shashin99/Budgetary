@@ -3,6 +3,7 @@ package com.example.budgetapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
@@ -10,8 +11,7 @@ import android.widget.Toast
 import com.example.budgetapp.R
 import com.example.budgetapp.models.ExpenseModel
 import com.google.firebase.FirebaseApp
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class AddExpense : AppCompatActivity() {
 
@@ -89,6 +89,5 @@ class AddExpense : AppCompatActivity() {
                 Toast.makeText(this, "Error ${err}",Toast.LENGTH_LONG).show()
             }
     }
-
 
 }

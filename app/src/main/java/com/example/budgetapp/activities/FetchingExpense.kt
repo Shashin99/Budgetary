@@ -38,57 +38,6 @@ class FetchingExpense : AppCompatActivity() {
         getEmployeeData()
     }
 
-    private fun searchExpenses(searchQuery: String) {
-        dbRef = FirebaseDatabase.getInstance().getReference("Expenses")
-        val query = dbRef.orderByChild("expenses_cetagory").equalTo(searchQuery)
-
-        query.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                expense_List.clear()
-                if (snapshot.exists()) {
-                    for (expenseSnap in snapshot.children) {
-                        val expenseData = expenseSnap.getValue(ExpenseModel::class.java)
-                        expense_List.add(expenseData!!)
-                    }
-                    val mAdapter = Expensesadapter(expense_List)
-                    expenseRecyclerView.adapter = mAdapter
-
-                    mAdapter.setOnItemClickListener(object : Expensesadapter.onItemClickListner {
-                        override fun onItemClick(position: Int) {
-                            val intent = Intent(this@FetchingExpense, ExpenseDetails::class.java)
-
-                            //put extras
-
-                            intent.putExtra("expenseID", expense_List[position].expenseID)
-                            intent.putExtra("expenses_cetagory", expense_List[position].expenses_cetagory)
-                            intent.putExtra("expenses_amount", expense_List[position].expenses_amount)
-                            intent.putExtra("expenses_date", expense_List[position].expenses_date)
-                            intent.putExtra("expenses_description", expense_List[position].expenses_description)
-                            startActivity(intent)
-                        }
-                    })
-
-                    expenseRecyclerView.visibility = View.VISIBLE
-                    tvLoadingDat.visibility = View.GONE
-                } else {
-                    // No matching data found
-                    expense_List.clear()
-                    val mAdapter = Expensesadapter(expense_List)
-                    expenseRecyclerView.adapter = mAdapter
-                    expenseRecyclerView.visibility = View.VISIBLE
-                    tvLoadingDat.visibility = View.GONE
-                    Toast.makeText(this@FetchingExpense, "No matching data found", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.e(TAG, "Failed to search expenses: ${error.message}")
-                Toast.makeText(this@FetchingExpense, "Failed to search expenses: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-
-
 
     private fun getEmployeeData(){
         expenseRecyclerView.visibility = View.GONE
