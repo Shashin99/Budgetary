@@ -26,9 +26,6 @@
             android:name=".activities.AddExpense"
             android:exported="false" />
         <activity
-            android:name=".IncomeHome"
-            android:exported="false" />
-        <activity
             android:name=".activities.IncomeMain"
             android:exported="false" />
         <activity

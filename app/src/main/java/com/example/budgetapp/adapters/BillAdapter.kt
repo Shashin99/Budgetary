@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.budgetapp.R
 import com.example.budgetapp.models.BillModel
 
+//adapter for recycler view
 class BillAdapter (private val billList:ArrayList<BillModel>) :
     RecyclerView.Adapter<BillAdapter.ViewHolder>(){
 
@@ -30,6 +31,7 @@ class BillAdapter (private val billList:ArrayList<BillModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentBill = billList[position]
         holder.tvSType.text = currentBill.billName
+        holder.tvBillDis.text = currentBill.billDis
     }
 
     override fun getItemCount(): Int {
@@ -39,6 +41,7 @@ class BillAdapter (private val billList:ArrayList<BillModel>) :
     class ViewHolder(itemView: View, clickListener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
 
         val tvSType: TextView = itemView.findViewById(R.id.tvBillName)
+        val tvBillDis: TextView = itemView.findViewById(R.id.tvDis)
 
         init{
             itemView.setOnClickListener {

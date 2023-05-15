@@ -1,6 +1,5 @@
 package com.example.budgetapp.models
 
-
 data class IncomeModel(
     var incomeName: String? = null,
     var incomeAmount: String? = null,
