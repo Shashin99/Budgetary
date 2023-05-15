@@ -36,8 +36,8 @@ class UserProfile : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     val userEmail = dataSnapshot.child("userEmail").getValue(String::class.java)
-                    val userTel = dataSnapshot.child("userTelNo").getValue(String::class.java)
-                    val userGoal = dataSnapshot.child("userGoal").getValue(String::class.java)
+                    val userTel = dataSnapshot.child("userTel").getValue(String::class.java)
+                    val userGoal = dataSnapshot.child("userGoals").getValue(String::class.java)
 
                     binding.udtextEmail.text = userEmail
                     binding.udtextTel.text = userTel

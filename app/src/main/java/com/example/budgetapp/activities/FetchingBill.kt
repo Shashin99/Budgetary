@@ -22,6 +22,8 @@ class FetchingBill : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetching_bill)
+
+        //fetching bill data in a recycler view
         billRecyclerView = findViewById(R.id.rvBill)
         billRecyclerView.layoutManager = LinearLayoutManager(this)
         billRecyclerView.setHasFixedSize(true)
@@ -49,6 +51,7 @@ class FetchingBill : AppCompatActivity() {
                     val mAdapter = BillAdapter(billList)
                     billRecyclerView.adapter = mAdapter
 
+                    //click Listener
                     mAdapter.setOnItemClickListener(object:BillAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
