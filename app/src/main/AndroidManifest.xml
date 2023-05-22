@@ -38,6 +38,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".update_delete"
+            android:exported="false" />
+        <activity
+            android:name=".add_plan"
+            android:exported="false" />
+        <activity
+            android:name=".Budgetplanhome"
+            android:exported="false" />
+        <activity
+            android:name=".Plan"
+            android:exported="false" />
+        <activity
             android:name=".activities.Login"
             android:exported="false" />
         <activity
