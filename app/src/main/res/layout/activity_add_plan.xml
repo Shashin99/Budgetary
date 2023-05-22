@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#018786"
+    tools:context=".AddPlan">
+
+    <TextView
+        android:id="@+id/newplan"
+        android:layout_width="230dp"
+        android:layout_height="43dp"
+        android:text="@string/newplan"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <TextView
+        android:id="@+id/categoryname"
+        android:layout_width="144dp"
+        android:layout_height="28dp"
+        android:text="@string/categoryname"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <ImageView
+        android:id="@+id/categoryshape"
+        android:layout_width="308dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465"
+        app:srcCompat="@drawable/shape2" />
+
+    <TextView
+        android:id="@+id/planamount"
+        android:layout_width="143dp"
+        android:layout_height="23dp"
+        android:text="@string/amount"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <ImageView
+        android:id="@+id/amountshape"
+        android:layout_width="308dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67"
+        app:srcCompat="@drawable/shape2" />
+
+    <TextView
+        android:id="@+id/budgetplandescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <ImageView
+        android:id="@+id/descriptionshape"
+        android:layout_width="308dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851"
+        app:srcCompat="@drawable/shape2" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionshape" />
+
+    <EditText
+        android:id="@+id/categoryinput"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryshape"
+        app:layout_constraintEnd_toEndOf="@+id/categoryshape"
+        app:layout_constraintStart_toStartOf="@+id/categoryshape"
+        app:layout_constraintTop_toTopOf="@+id/categoryshape" />
+
+    <EditText
+        android:id="@+id/amountinput"
+        android:layout_width="226dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="@+id/amountshape"
+        app:layout_constraintEnd_toEndOf="@+id/amountshape"
+        app:layout_constraintStart_toStartOf="@+id/amountshape"
+        app:layout_constraintTop_toTopOf="@+id/amountshape" />
+
+    <EditText
+        android:id="@+id/descriptioninput"
+        android:layout_width="226dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionshape"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionshape"
+        app:layout_constraintStart_toStartOf="@+id/descriptionshape"
+        app:layout_constraintTop_toTopOf="@+id/descriptionshape" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

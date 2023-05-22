@@ -85,7 +85,7 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/text1"
+                            android:id="@+id/homeBudget"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
@@ -96,7 +96,7 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/text2"
+                            android:id="@+id/homeBill"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
@@ -107,7 +107,7 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/text3"
+                            android:id="@+id/homeExpense"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"

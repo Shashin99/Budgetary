@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
@@ -12,33 +12,66 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetApp"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".activities.ExpUpdateDialog"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FetchingExpense"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ExpenseDetails"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddExpense"
+            android:exported="false" />
+        <activity
+            android:name=".activities.IncomeMain"
+            android:exported="false" />
+        <activity
+            android:name=".Intro"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".update_delete"
+            android:exported="false" />
+        <activity
+            android:name=".add_plan"
+            android:exported="false" />
+        <activity
+            android:name=".Budgetplanhome"
+            android:exported="false" />
+        <activity
+            android:name=".Plan"
+            android:exported="false" />
         <activity
             android:name=".activities.Login"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UserDetails"
             android:exported="false" />
         <activity
             android:name=".activities.UserProfile"
             android:exported="false" />
         <activity
-            android:name=".IncomeAdapter"
+            android:name=".activities.HomePage"
             android:exported="false" />
         <activity
-            android:name=".IncomeMain"
+            android:name=".activities.EditIncome"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".activities.AddIncome"
             android:exported="false" />
         <activity
-            android:name=".EditIncome"
-            android:exported="false" />
-        <activity
-            android:name=".AddIncome"
-            android:exported="false" />
-        <activity
-            android:name=".IncomeHome"
-            android:exported="false" />
-        <activity
-            android:name=".ExpensesHome"
+            android:name=".activities.ExpensesHome"
             android:exported="false" />
         <activity
             android:name=".activities.AddBill"
@@ -57,13 +90,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.BillsHome"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

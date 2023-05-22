@@ -76,6 +76,15 @@
 
     </string-array>
 
+
+    <string-array name="Choose_category">
+        <item></item>
+        <item>Food</item>
+        <item>Medicine</item>
+        <item>Education</item>
+        <item>Other</item>
+    </string-array>
+
     <string name="text_income">INCOME</string>
     <string name="income_heading">INCOME</string>
     <string name="profile_head">PROFILE</string>
@@ -85,5 +94,30 @@
     <string name="income2Rs">10,000</string>
     <string name="income3" />
     <string name="date1">01 / 03 / 2023</string>
+
+
+    <!--Budget plan-->
+    <string name="app_name">PlanManegment</string>
+    <string name="budget_plan">Budget Plan</string>
+    <string name="income">Income</string>
+    <string name="incamount">Rs.50000.00</string>
+    <string name="btnaddnewplan">Add New Plan</string>
+    <string name="ckboxfoods">Foods</string>
+    <string name="foodvalue">Rs.15000.00</string>
+    <string name="ckboxtransport">Transport</string>
+    <string name="tranportvalue">Rs.10000.00</string>
+    <string name="ckboxmedicine">Medicine</string>
+    <string name="medicinevalue">Rs.5000.00</string>
+    <string name="btnedit">Edit</string>
+    <string name="newplan">New Plan</string>
+    <string name="categoryname">Category Name</string>
+    <string name="amount">Amount</string>
+    <string name="description">Description</string>
+    <string name="ui2categoryname">Category Name</string>
+    <string name="ui2amount">Amount</string>
+    <string name="btnproceed">Proceed</string>
+    <string name="btnplanupdate">UPDATE</string>
+    <string name="btnplandelete">DELETE</string>
+
 
 </resources>
