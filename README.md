@@ -1,6 +1,7 @@
 # Budgetary - Money Management Mobile Application
+Linkedin Link <br/>
+https://www.linkedin.com/posts/waseek-lareef-981267217_money-uiux-frontend-activity-7060351384675647488-qrHH?utm_source=share&utm_medium=member_desktop
 # Batch - 02.02
-
 
 <table class="styled-table" align="center">
   <thead>
